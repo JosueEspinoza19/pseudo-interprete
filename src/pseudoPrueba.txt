@@ -1,0 +1,35 @@
+
+inicio-programa
+    variables: numeroDeMaterias, promedio, i, calificacion, suma, j
+
+    leer numeroDeMaterias
+
+    inicio-metodo
+        nombre-metodo: sacarPromedio
+        parametros: numeroDeMaterias, promedio, i, calificacion, suma
+
+            mientras (i < numeroDeMaterias)
+                leer calificacion
+                suma = suma + calificacion
+                i = i + 1
+            fin-mientras
+
+            promedio = suma / numeroDeMaterias
+
+            si(promedio >= 6) entonces
+               escribir "Aprobado con: ", promedio
+            fin-si
+
+            si(promedio == 10) entonces
+                escribir "Excelente"
+            fin-si
+
+            si(promedio < 6) entonces
+                escribir "Reprobado con: ", promedio
+            fin-si
+    fin-metodo
+
+    sacarPromedio(numeroDeMaterias, promedio, i, calificacion, suma)
+
+fin-programa
+
